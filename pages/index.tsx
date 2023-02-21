@@ -1,5 +1,5 @@
 import EmptyState from '@atlaskit/empty-state';
-import { Button, Layout, notification, Space } from 'antd';
+import { Alert, Button, Layout, notification, Space } from 'antd';
 import Head from 'next/head';
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -51,6 +51,24 @@ export default function Home() {
                 description="This is of the empty state from atlassian component"
                 primaryAction={
                   <Button type="primary">Works with existing buttons</Button>
+                }
+              />
+              {/* ALERT */}
+              <Alert
+                message="You are getting close to your monthly credit limit"
+                description="You can upgrade to the enterprise plan and you will be able to get 10,000 credits per month. Wowza!"
+                type="warning"
+                showIcon
+                closable
+                action={
+                  <Space direction="horizontal">
+                    <Button size="small" type="primary">
+                      Learn more
+                    </Button>
+                    <Button size="small" danger type="ghost">
+                      Schedule a walk-through
+                    </Button>
+                  </Space>
                 }
               />
             </div>
