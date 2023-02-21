@@ -1,5 +1,6 @@
+import Hero from '@/components/marketing/hero';
 import EmptyState from '@atlaskit/empty-state';
-import { Alert, Button, Layout, notification, Space } from 'antd';
+import { Alert, Button, Layout, notification, Result, Space } from 'antd';
 import Head from 'next/head';
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -31,48 +32,58 @@ export default function Home() {
           </Head>
         </Header>
         <Content style={{ padding: '0 50px' }}>
-          <main>
-            <div>
-              <h1>Welcome to the Cabana HappyPath Demo Site!</h1>
-              <p>
-                <h4>Get Started:</h4>
-                <code>npm i emptystates</code>
-              </p>
+          <Hero />
 
-              {/* NOTIFICATION EXAMPLE */}
-              <Button type="primary" onClick={openNotification}>
-                Open the notification box
-              </Button>
-              {/* END NOTIFICATION EXAMPLE */}
+          <p>
+            <h4>Get Started:</h4>
+            <code>npm i @happypath/emptystates</code>
+          </p>
 
-              {/* Empty state - replace with ours! */}
-              <EmptyState
-                header="hello empty state!"
-                description="This is of the empty state from atlassian component"
-                primaryAction={
-                  <Button type="primary">Works with existing buttons</Button>
-                }
-              />
-              {/* ALERT */}
-              <Alert
-                message="You are getting close to your monthly credit limit"
-                description="You can upgrade to the enterprise plan and you will be able to get 10,000 credits per month. Wowza!"
-                type="warning"
-                showIcon
-                closable
-                action={
-                  <Space direction="horizontal">
-                    <Button size="small" type="primary">
-                      Learn more
-                    </Button>
-                    <Button size="small" danger type="ghost">
-                      Schedule a walk-through
-                    </Button>
-                  </Space>
-                }
-              />
-            </div>
-          </main>
+          {/* NOTIFICATION EXAMPLE */}
+          <Button type="primary" onClick={openNotification}>
+            Open the notification box
+          </Button>
+          {/* END NOTIFICATION EXAMPLE */}
+
+          {/* Empty state - replace with ours! */}
+          <EmptyState
+            header="hello empty state!"
+            description="This is of the empty state from atlassian component"
+            primaryAction={
+              <Button type="primary">Works with existing buttons</Button>
+            }
+          />
+          {/* ALERT */}
+          <Alert
+            message="You are getting close to your monthly credit limit"
+            description="You can upgrade to the enterprise plan and you will be able to get 10,000 credits per month. Wowza!"
+            type="warning"
+            showIcon
+            closable
+            action={
+              <Space direction="horizontal">
+                <Button size="small" type="primary">
+                  Learn more
+                </Button>
+                <Button size="small" danger type="ghost">
+                  Schedule a walk-through
+                </Button>
+              </Space>
+            }
+          />
+
+          {/* `RESULT` from ant.design */}
+          <Result
+            status="success"
+            title="Successfully Purchased Cloud Server ECS!"
+            subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+            extra={[
+              <Button type="primary" key="console">
+                Go Console
+              </Button>,
+              <Button key="buy">Buy Again</Button>,
+            ]}
+          />
         </Content>
         <Footer style={{ textAlign: 'center' }}>Synthesize Inc.</Footer>
       </Space>
