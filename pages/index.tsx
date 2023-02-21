@@ -1,3 +1,4 @@
+import EmptyState from '@atlaskit/empty-state';
 import { Button, Layout, notification, Space } from 'antd';
 import Head from 'next/head';
 const { Header, Footer, Sider, Content } = Layout;
@@ -43,10 +44,19 @@ export default function Home() {
                 Open the notification box
               </Button>
               {/* END NOTIFICATION EXAMPLE */}
+
+              {/* Empty state - replace with ours! */}
+              <EmptyState
+                header="hello empty state!"
+                description="This is of the empty state from atlassian component"
+                primaryAction={
+                  <Button type="primary">Works with existing buttons</Button>
+                }
+              />
             </div>
           </main>
         </Content>
-        <Footer style={{ textAlign: 'center' }}>Footer</Footer>
+        <Footer style={{ textAlign: 'center' }}>Synthesize Inc.</Footer>
       </Space>
     </>
   );
