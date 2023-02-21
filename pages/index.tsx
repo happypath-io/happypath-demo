@@ -63,10 +63,16 @@ export default function Home() {
             action={
               <Space direction="horizontal">
                 <Button size="small" type="primary">
-                  Learn more
+                  <a href="#custom-action-link">Learn more</a>
                 </Button>
                 <Button size="small" danger type="ghost">
-                  Schedule a walk-through
+                  <a
+                    href="https://calendly.com/synthesize"
+                    target={'_blank'}
+                    rel="noreferrer"
+                  >
+                    Schedule a walk-through
+                  </a>
                 </Button>
               </Space>
             }
