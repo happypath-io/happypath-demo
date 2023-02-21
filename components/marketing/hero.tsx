@@ -6,7 +6,7 @@ export default function Hero() {
       <h1>Stop dead-ends drive delightful UX</h1>
       {/* Manage your user-facing messaging in-app  */}
       <p>
-        JoyPath gives you a toolkit to easily create and manage your empty
+        HappyPath gives you a toolkit to easily create and manage your empty
         states, alerts, and other #&quot;in-between&quot; moments in a friendly
         way for developers, product managers, UX designers and content teams.
       </p>

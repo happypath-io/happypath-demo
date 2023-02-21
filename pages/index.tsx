@@ -55,8 +55,8 @@ export default function Home() {
           />
           {/* ALERT */}
           <Alert
-            message="You are getting close to your monthly credit limit"
-            description="You can upgrade to the enterprise plan and you will be able to get 10,000 credits per month. Wowza!"
+            message="Hi {Taylor}, you are getting close to your monthly credit limit"
+            description="You can upgrade to the `{ProPlan.name}` plan and you will be able to get `{ProPlan.TotalCredits}` credits per month. Wowza!"
             type="warning"
             showIcon
             closable
