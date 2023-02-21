@@ -1,9 +1,20 @@
-import { Button, Layout, Space } from 'antd';
+import { Button, Layout, notification, Space } from 'antd';
+import Head from 'next/head';
 const { Header, Footer, Sider, Content } = Layout;
 
-import Head from 'next/head';
-
 export default function Home() {
+  const [api, contextHolder] = notification.useNotification();
+  const openNotification = () => {
+    notification.open({
+      message: "Dave, I'm afraid I can't do that.",
+      description:
+        'This notification content should be powered by us, along with tracking the metrics of how it performs with impressions and clicks!',
+      onClick: () => {
+        console.log('Notification Clicked!');
+      },
+    });
+  };
+
   return (
     <>
       <Space direction="vertical" style={{ width: '100%' }} size={[0, 48]}>
@@ -26,7 +37,12 @@ export default function Home() {
                 <h4>Get Started:</h4>
                 <code>npm i emptystates</code>
               </p>
-              <Button type="primary">Button</Button>
+
+              {/* NOTIFICATION EXAMPLE */}
+              <Button type="primary" onClick={openNotification}>
+                Open the notification box
+              </Button>
+              {/* END NOTIFICATION EXAMPLE */}
             </div>
           </main>
         </Content>
