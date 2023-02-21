@@ -8,7 +8,7 @@ export default function Home() {
   const [api, contextHolder] = notification.useNotification();
   const openNotification = () => {
     notification.open({
-      message: "Dave, I'm afraid I can't do that.",
+      message: '{UserName} has been invited',
       description:
         'This notification content should be powered by us, along with tracking the metrics of how it performs with impressions and clicks!',
       onClick: () => {
