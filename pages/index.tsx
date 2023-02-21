@@ -32,7 +32,7 @@ export default function Home() {
         <Content style={{ padding: '0 50px' }}>
           <main>
             <div>
-              <h1>Welcome to the HappyPath Demo Site!</h1>
+              <h1>Welcome to the Cabana HappyPath Demo Site!</h1>
               <p>
                 <h4>Get Started:</h4>
                 <code>npm i emptystates</code>
