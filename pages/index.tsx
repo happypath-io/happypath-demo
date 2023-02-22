@@ -10,7 +10,7 @@ export default function Home() {
     notification.open({
       message: '{UserName} has been invited',
       description:
-        'This notification content should be powered by us, along with tracking the metrics of how it performs with impressions and clicks!',
+        'This notification is an example of existing UI component, that we can wrap with <HappyPath></HappyPath> so content can be powered by us, along with tracking the metrics of how it performs with impressions and clicks!',
       onClick: () => {
         console.log('Notification Clicked!');
       },
@@ -36,7 +36,7 @@ export default function Home() {
 
           <p>
             <h4>Get Started:</h4>
-            <code>npm i @happypath/emptystates</code>
+            <code>npm i @happypath-io/empty-states</code>
           </p>
 
           {/* NOTIFICATION EXAMPLE */}
@@ -82,7 +82,7 @@ export default function Home() {
           <Result
             status="success"
             title="Successfully Purchased Cloud Server ECS!"
-            subTitle="Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait."
+            subTitle="This comes from the Ant Design component library. Order number: 2017182818828182881 Cloud server configuration takes 1-5 minutes, please wait. Can HappyPath power this content and track these button clicks?"
             extra={[
               <Button type="primary" key="console">
                 Go Console
