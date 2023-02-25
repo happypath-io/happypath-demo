@@ -1,0 +1,15 @@
+{
+  "Dashboard": {
+    "header": "Dashboard",
+    "description": "This is the dashboard page",
+    "primaryActionProps": {
+      "copy": "Primary Action"
+    }
+  },
+  "Alert": {
+    "message": "I love Lucy"
+  },
+  "Search": {
+    "placeholder": "Search"
+  }
+}
